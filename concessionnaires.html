@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-black">
+
+<head>
+    <meta charSet="utf-8" />
+    <title>Concessionnaires</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="dcterms.rightsHolder" content="Automobile.tn" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000" />
+    <link rel="stylesheet" href="css/style.css" fetchpriority="high" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="flex h-full min-h-full flex-col scroll-smooth bg-white font-sans text-[#3d3d3d]">
+    <header class="bg-black text-white h-[117px]">
+        <div class="px-4 mx-auto w-full xl:px-0 max-w-7xl h-[117px]">
+            <div class="flex items-center h-full justify-between lg:items-end"><a aria-label="Accueil du site" href="#"><img src="images/logo-GITLGCC6.svg" class="my-4 h-[86px] w-auto max-w-[290px] sm:max-w-none" alt="Automobile.tn" width="325" height="86"></a>
+                <div class="hidden flex-col justify-between text-[14.4px] transition lg:flex items-end">
+                    <div class="my-4 mx-auto lg:mr-0 max-w-xs flex w-[300px]"><a class="rounded-l bg-gray-500 p-2" href="#">
+                            <svg class="w-8 h-8 text-white" focusable="false" role="img" aria-label="Demander un devis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="max-width:32px">
+                                <path fill="currentColor" d="M479.2,303.6,359.94,184.72a9.83,9.83,0,0,0-4.91-3.27,29.51,29.51,0,0,0-6.53-1.09,17.18,17.18,0,0,0-8.72,2.17q-9.27,3.27-9.28,12l0,52.32-180.37-.12,0,59.4-107.82-108,108-107.28,0,63.21,145.5.1V131.28l-122.61-.08,0-55q0-10.35-9.26-14.72a17,17,0,0,0-7.62-1.64q-8.73,0-12.54,4.9L24.81,182.87a21.07,21.07,0,0,0,0,30.52L143.51,332.26q3.81,3.81,11.44,3.82a24.72,24.72,0,0,0,8.72-1.63q9.26-2.71,9.27-12l0-52.31,180.92.11,0-59.39,107.28,108L353.79,426.12l0-63.21-146.59-.09V385.7l123.15.08,0,55q0,10.35,9.26,14.72a19.21,19.21,0,0,0,7.63,1.64q8.17,0,12.53-4.9L479.18,334.11q6-7.08,6-15.25T479.2,303.6Z">
+                                </path>
+                            </svg></a>
+                        <form method="get" class="flex" action="/fr/recherche"><input name="keyword" class="grow bg-[#212529] border border-[#323232] py-3 px-3" placeholder="Rechercher ..."><button type="submit"><i class="fa fa-search rounded-r bg-ram p-4 text-white text-[16px]"></i></button>
+                        </form>
+                    </div>
+                    <ul class="flex h-full  gap-1">
+                        <li class="group relative hover:bg-ram"><a class="block flex h-full items-center py-2 px-4 font-semibold uppercase" href="#">Prix du neuf</a>
+                            <ul class="absolute z-[1000] hidden w-[160px] divide-y divide-gray-300 rounded-b bg-white text-gray-800 shadow-md shadow-gray-300 group-hover:block">
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Recherche</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Marque</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Concessionnaires</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Comparateur</a></li>
+                            </ul>
+                        </li>
+                        <li class="group relative hover:bg-ram"><a class="block flex h-full items-center py-2 px-4 font-semibold uppercase" href="#">Occasions</a>
+                            <ul class="absolute z-[1000] hidden w-[160px] divide-y divide-gray-300 rounded-b bg-white text-gray-800 shadow-md shadow-gray-300 group-hover:block">
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Recherche</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Annonces du jour</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Vendeurs Pro</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Vendre</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Comparateur</a></li>
+                            </ul>
+                        </li>
+                        <li class="group relative hover:bg-ram"><a class="block flex h-full items-center py-2 px-4 font-semibold uppercase" href="#">Auto Mag</a>
+                            <ul class="absolute z-[1000] hidden w-[160px] divide-y divide-gray-300 rounded-b bg-white text-gray-800 shadow-md shadow-gray-300 group-hover:block">
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Nouveautés</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Actu</a>
+                                </li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Essais</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Concepts</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Supercars</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Sport Auto</a></li>
+                            </ul>
+                        </li>
+                        <li class="group relative hover:bg-ram"><a aria-current="page" class="block flex h-full items-center py-2 px-4 font-semibold uppercase bg-ram" href="#">Guide Pratique</a>
+                            <ul class="absolute z-[1000] hidden w-[160px] divide-y divide-gray-300 rounded-b bg-white text-gray-800 shadow-md shadow-gray-300 group-hover:block">
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Droits de douanes</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">FCR</a>
+                                </li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Permis de conduire</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Visite technique</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Vignette</a></li>
+                                <li class="py-2 px-3"><a class="block hover:text-ram" href="#">Voitures populaires</a></li>
+                            </ul>
+                        </li>
+                        <li class="group relative hover:bg-ram"><a class="block flex h-full items-center py-2 px-4 font-semibold uppercase" href="#">Mon espace</a>
+                            <ul class="absolute z-[1000] hidden w-[160px] divide-y divide-gray-300 rounded-b bg-white text-gray-800 shadow-md shadow-gray-300 group-hover:block">
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mr-4 lg:hidden"><label for="mobile-menu"><i class="fal fa-bars cursor-pointer text-gray-300 hover:text-ram text-4xl"></i></label><input type="checkbox" class="hidden" role="switch" id="mobile-menu" name="mobile_menu">
+                    <div class="fixed inset-0 bottom-0 z-[1000] hidden bg-black/50"><label for="mobile-menu" class="block h-full w-full">&nbsp;</label>
+                        <div class="ml-auto h-full w-full min-w-full animate-slideMenu bg-black sm:w-[360px] sm:min-w-min">
+                            <div class="flex h-full flex-col p-3 px-6">
+                                <div class="mb-3 flex items-center justify-between"><img src="images/logo-GITLGCC6.svg" alt="Automobile.tn" class="logo-compact -mt-[3.4rem] h-24 w-auto w-[274px]"><label for="mobile-menu" class="mr-5 mt-1 cursor-pointer"><i class="fal fa-times text-2xl text-gray-500 hover:text-ram"></i></label>
+                                </div>
+                                <div class="flex h-full flex-col gap-0.5 overflow-y-auto">
+                                    <div>
+                                        <div class="my-4 mx-auto lg:mr-0 max-w-xs flex w-full"><a class="rounded-l bg-gray-500 p-2" href="#"><svg class="w-8 h-8 text-white" focusable="false" role="img" aria-label="Demander un devis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="max-width:32px">
+                                                    <path fill="currentColor" d="M479.2,303.6,359.94,184.72a9.83,9.83,0,0,0-4.91-3.27,29.51,29.51,0,0,0-6.53-1.09,17.18,17.18,0,0,0-8.72,2.17q-9.27,3.27-9.28,12l0,52.32-180.37-.12,0,59.4-107.82-108,108-107.28,0,63.21,145.5.1V131.28l-122.61-.08,0-55q0-10.35-9.26-14.72a17,17,0,0,0-7.62-1.64q-8.73,0-12.54,4.9L24.81,182.87a21.07,21.07,0,0,0,0,30.52L143.51,332.26q3.81,3.81,11.44,3.82a24.72,24.72,0,0,0,8.72-1.63q9.26-2.71,9.27-12l0-52.31,180.92.11,0-59.39,107.28,108L353.79,426.12l0-63.21-146.59-.09V385.7l123.15.08,0,55q0,10.35,9.26,14.72a19.21,19.21,0,0,0,7.63,1.64q8.17,0,12.53-4.9L479.18,334.11q6-7.08,6-15.25T479.2,303.6Z">
+                                                    </path>
+                                                </svg></a>
+                                            <form method="get" class="flex" action="/fr/recherche"><input name="keyword" class="grow bg-[#212529] border border-[#323232] py-3 px-3" placeholder="Rechercher ..."><button type="submit"><i class="fa fa-search rounded-r bg-ram p-4 text-white text-[16px]"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <details class="cursor-pointer open:bg-ram hover:bg-ram-hover">
+                                        <summary class="relative flex items-stretch  justify-between font-semibold uppercase">
+                                            <a class="grow pl-3 leading-[50px]" href="#">Prix du neuf</a><i class="fa fa-plus leading-1 absolute right-0 top-0 h-full py-3 pl-10 pr-3"></i>
+                                        </summary>
+                                        <div class="divide-y divide-gray-300"><a class="flex bg-white p-3 text-gray-800" href="#">Recherche</a><a class="flex bg-white p-3 text-gray-800" href="#">Marque</a><a class="flex bg-white p-3 text-gray-800" href="#">Concessionnaires</a>
+                                            <a class="flex bg-white p-3 text-gray-800" href="#">Comparateur</a>
+                                        </div>
+                                    </details>
+                                    <details class="cursor-pointer open:bg-ram hover:bg-ram-hover">
+                                        <summary class="relative flex items-stretch  justify-between font-semibold uppercase">
+                                            <a class="grow pl-3 leading-[50px]" href="#">Occasions</a><i class="fa fa-plus leading-1 absolute right-0 top-0 h-full py-3 pl-10 pr-3"></i>
+                                        </summary>
+                                        <div class="divide-y divide-gray-300"><a class="flex bg-white p-3 text-gray-800" href="#">Recherche</a><a class="flex bg-white p-3 text-gray-800" href="#">Annonces du jour</a><a class="flex bg-white p-3 text-gray-800" href="#">Vendeurs Pro</a><a class="flex bg-white p-3 text-gray-800" href="#">Vendre</a><a class="flex bg-white p-3 text-gray-800" href="#">Comparateur</a></div>
+                                    </details>
+                                    <details class="cursor-pointer open:bg-ram hover:bg-ram-hover">
+                                        <summary class="relative flex items-stretch  justify-between font-semibold uppercase">
+                                            <a class="grow pl-3 leading-[50px]" href="#">Auto Mag</a><i class="fa fa-plus leading-1 absolute right-0 top-0 h-full py-3 pl-10 pr-3"></i>
+                                        </summary>
+                                        <div class="divide-y divide-gray-300"><a class="flex bg-white p-3 text-gray-800" href="#">Nouveautés</a><a class="flex bg-white p-3 text-gray-800" href="#">Actu</a><a class="flex bg-white p-3 text-gray-800" href="#">Essais</a>
+                                            <a class="flex bg-white p-3 text-gray-800" href="#">Concepts</a><a class="flex bg-white p-3 text-gray-800" href="#">Supercars</a><a class="flex bg-white p-3 text-gray-800" href="#">Sport Auto</a>
+                                        </div>
+                                    </details>
+                                    <details class="cursor-pointer open:bg-ram hover:bg-ram-hover">
+                                        <summary class="relative flex items-stretch  justify-between font-semibold uppercase">
+                                            <a aria-current="page" class="grow pl-3 leading-[50px] active" href="#">Guide Pratique</a><i class="fa fa-plus leading-1 absolute right-0 top-0 h-full py-3 pl-10 pr-3"></i>
+                                        </summary>
+                                        <div class="divide-y divide-gray-300"><a class="flex bg-white p-3 text-gray-800" href="#">Droits de douanes</a><a class="flex bg-white p-3 text-gray-800" href="#">FCR</a><a class="flex bg-white p-3 text-gray-800" href="#">Permis de conduire</a><a class="flex bg-white p-3 text-gray-800" href="#">Visite technique</a><a class="flex bg-white p-3 text-gray-800" href="#">Vignette</a>
+                                            <a class="flex bg-white p-3 text-gray-800" href="#">Voitures populaires</a>
+                                        </div>
+                                    </details>
+                                    <div class="mt-5 border-t border-gray-800 pt-5"><a class="block rounded-md bg-ram p-2 text-center uppercase hover:bg-ram-hover" href="#">Connexion</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="grow bg-white">
+        <div class="px-4 mx-auto w-full xl:px-0 max-w-7xl">
+            <nav class="relative flex items-center justify-between border-b pb-2" aria-label="Fil d'Ariane">
+                <ol class="flex flex-1 flex-wrap items-center">
+                    <li>
+                        <div class="flex items-center whitespace-nowrap py-1 md:py-2 "><a data-simple-link="fr/neuf" class="text-sm font-medium uppercase text-gray-500 hover:text-gray-700 dark:hover:text-gray-400" href="#">Prix du neuf</a><i class="fa fa-chevron-right mx-1.5 text-[10px] text-slate-400 transition duration-150 ease-in-out" aria-hidden="true"></i></div>
+                    </li>
+                    <li>
+                        <div class="flex items-center whitespace-nowrap py-1 md:py-2 "><a data-simple-link="fr/neuf/concessionnaires" class="text-sm font-medium uppercase text-gray-500 hover:text-gray-700 dark:hover:text-gray-400" href="#">Concessionnaires</a></div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="px-4 mx-auto w-full xl:px-0 max-w-7xl">
+            <div class="mb-3">
+                <div class="relative text-center my-2 lg:mb-10 ">
+                    <h1 class="py-2 before:absolute before:inset-x-0 before:bottom-0.5 before:mx-auto before:h-[1px] after:absolute  after:inset-x-0 after:bottom-0 after:mx-auto after:h-1.5 after:w-1.5 pb-3 text-2xl md:text-3xl font-semibold before:w-[180px]   text-center uppercase before:border-b before:border-gray-300 after:bg-ram">Concessionnaires</h1>
+                </div>
+                <div class="grid_wrapper">
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">ADEV</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">39 Avenue Kheireddine Pacha, 1002 Tunis</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->71 188 700</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 903 443</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Nissan" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/10.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/10.png 115w"><img src="https://catalogue.automobile.tn/marques/10.png" alt="Nissan" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Nissan</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">AFRIQUE AUTO</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Z.I Charguia II TUNIS CARTHAGE ARIANA 1</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->71 940 514</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 941 393</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Chevrolet" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/4.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/4.png 115w"><img src="https://catalogue.automobile.tn/marques/4.png" alt="Chevrolet" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Chevrolet</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">ALPHA FORD</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300"><b>Showroom Alpha Ford</b><br> Limite du Boulevard B Lotissement El Khalij, Les Berges du Lac
+                                <br><b>Après Vente</b><br>Autoroute A1 - Sortie Hammam-lif, Mornag - Ben Arous</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->71 100 600</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 308 401 </p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Ford" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/6.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/6.png 115w"><img src="https://catalogue.automobile.tn/marques/6.png" alt="Ford" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Ford</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Alpha Hyundai Motor</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">ROUTE DE LA MARSA GP 9 AIN ZAGHOUAN Cité El Mhiri, Tunis</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->31 398 000</p>
+                            <p><b>Fax :</b>
+                                <!-- -->31 908 766</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Hyundai" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/216.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/216.png 115w"><img src="https://catalogue.automobile.tn/marques/216.png" alt="Hyundai" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Hyundai</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Alpha International</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Boulevard B – Lotissement el khalij Les Berges du lac Tunis
+                            </p>
+                            <p><b>Tél. :</b>
+                                <!-- -->70 011 370</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 861 226</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Land Rover" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/137.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/137.png 115w"><img src="https://catalogue.automobile.tn/marques/137.png" alt="Land Rover" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Land Rover</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Jaguar" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/144.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/144.png 115w"><img src="https://catalogue.automobile.tn/marques/144.png" alt="Jaguar" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Jaguar</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">ARTES</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">39 Avenue Kheireddine Pacha - 1002 - Tunis Belvédère</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->71 188 700</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 903 443 </p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Renault" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/13.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/13.png 115w"><img src="https://catalogue.automobile.tn/marques/13.png" alt="Renault" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Renault</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Dacia" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/64.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/64.png 115w"><img src="https://catalogue.automobile.tn/marques/64.png" alt="Dacia" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Dacia</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Asian Auto</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Rue Platon, ZI Kheireddine – 2015 Le Kram - Tunisie</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->31 38 43 50</p>
+                            <p><b>Fax :</b>
+                                <!-- -->31 38 43 51</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="GAC" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1661.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1661.png 115w"><img src="https://catalogue.automobile.tn/marques/1661.png" alt="GAC" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">GAC</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">ATLAS AUTO</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Zone industrielle Megrine, 2013, Ben Arous</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->31 31 66 66</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Great Wall" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1549.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1549.png 115w"><img src="https://catalogue.automobile.tn/marques/1549.png" alt="Great Wall" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Great Wall</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Haval" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1550.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1550.png 115w"><img src="https://catalogue.automobile.tn/marques/1550.png" alt="Haval" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Haval</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Automobiles Zouari</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Parc Industriel، N1, <b>Ben Arous</b><br> Route de la ceinture, 4022 Z.I. Akouda - <b>Sousse</b></p>
+                            <p><b>Tél. :</b>
+                                <!-- -->70 130 130</p>
+                            <p><b>Fax :</b>
+                                <!-- -->73 343 233</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Ssangyong" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/221.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/221.png 115w"><img src="https://catalogue.automobile.tn/marques/221.png" alt="Ssangyong" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Ssangyong</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Mahindra" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1497.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1497.png 115w"><img src="https://catalogue.automobile.tn/marques/1497.png" alt="Mahindra" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Mahindra</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Ben Jemaa Motors</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Avenue Sadok Mokaddem, les Berges du Lac 1</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->70 837 355</p>
+                            <p><b>Fax :</b>
+                                <!-- -->70 836 574</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="BMW" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/3.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/3.png 115w"><img src="https://catalogue.automobile.tn/marques/3.png" alt="BMW" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">BMW</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Mini" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/198.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/198.png 115w"><img src="https://catalogue.automobile.tn/marques/198.png" alt="Mini" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Mini</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">BSB Toyota</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Zone industrielle Sidi Daoud<br> Route de la Marsa Tunis</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->36 404 600</p>
+                            <p><b>Fax :</b>
+                                <!-- -->36 404 613</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Toyota" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/207.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/207.png 115w"><img src="https://catalogue.automobile.tn/marques/207.png" alt="Toyota" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Toyota</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">CAR PRO</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300"><b>Suzuki Tunis</b><br>9, Rue Hamouda Pacha, 1001 Tunis - 70 60 35 00<br><b>Suzuki Sousse - Laatiri Auto Service </b><br>Route de Tunis, Akouda Sousse - 73 34 24 33 - 95 12 07 90<br><b>Suzuki Nabeul - L'Expert Cap Auto</b><br>Avenue
+                                du Grand Maghreb, 8000 Nabeul - 28 27 46 25<br><b>Suzuki Sfax - Select Car</b><br> Avenue Hédi Khfacha, Bab Bhar 3000 Sfax - 29 937 230 – 29 937 231
+                                <br><b>Suzuki Djerba - Dima Pro Cars</b><br> Route Ajim Km 1 Houmt Souk, Djerba - 75650946 – 58351905 – 58311012</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->70 60 35 00</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 77 07 96</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Suzuki" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1246.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1246.png 115w"><img src="https://catalogue.automobile.tn/marques/1246.png" alt="Suzuki" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Suzuki</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">CITY CARS</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Rue des Usines ZI La Goulette - Le Kram</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->(+216) 36 406 200</p>
+                            <p><b>Fax :</b>
+                                <!-- -->(+216) 36 406 206</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="KIA" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/7.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/7.png 115w"><img src="https://catalogue.automobile.tn/marques/7.png" alt="KIA" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">KIA</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">ENNAKL AUTOMOBILES</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300"><b>Volkswagen, Volkswagen Utilitaires, Seat</b><br>Z.I Ariana - Aéroport - BP 129 - 1080 Tunis<br><br><b>Audi, Porsche, Skoda</b><br>Route Régionale 23 - Tunis la Goulette</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->36 036 036 - 36 036 000</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 942 420</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Audi" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/2.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/2.png 115w"><img src="https://catalogue.automobile.tn/marques/2.png" alt="Audi" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Audi</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Seat" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/14.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/14.png 115w"><img src="https://catalogue.automobile.tn/marques/14.png" alt="Seat" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Seat</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Volkswagen" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/15.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/15.png 115w"><img src="https://catalogue.automobile.tn/marques/15.png" alt="Volkswagen" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Volkswagen</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Porsche" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/125.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/125.png 115w"><img src="https://catalogue.automobile.tn/marques/125.png" alt="Porsche" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Porsche</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Skoda" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1209.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1209.png 115w"><img src="https://catalogue.automobile.tn/marques/1209.png" alt="Skoda" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Skoda</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Cupra" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1665.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1665.png 115w"><img src="https://catalogue.automobile.tn/marques/1665.png" alt="Cupra" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Cupra</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Helios Cars</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Rue Al Harir, Zone Industrielle Bir El Kassâa. 2059 – Ben Arous</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->36 038 000</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="BYD" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1656.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1656.png 115w"><img src="https://catalogue.automobile.tn/marques/1656.png" alt="BYD" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">BYD</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">ITALCAR</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300"><b>Showroom Mégrine</b> : Zone Industrielle Megrine-GP1 Km 5.5، Mégrine 2014<br>Tel : 31 363 250
+                                <br><b>Showroom les Berges du Lac</b> : Bd. principal les berges du lac - 2045 – Tunis
+                                <br>Tél. : 71 655 500
+                                <br><b>Concept Store Italcar Azur City</b> : Centre commercial Azur City, Autoroute A1 Km2 - Boumhel - Ben Arous
+                                <br>Tél : 58 530 604
+                                <br><b>Service après-vente</b> : 101, avenue louis braille cité el khadra, Tunis 1003
+                                <br>Tel : 71 773 322/58 530 625
+                                <br><b>Changan</b>
+                                <br>Tel : 71 77 24 43 / 58 530 628</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->71 655 500</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 655 407</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Alfa Romeo" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1.png 115w"><img src="https://catalogue.automobile.tn/marques/1.png" alt="Alfa Romeo" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Alfa Romeo</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Fiat" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/88.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/88.png 115w"><img src="https://catalogue.automobile.tn/marques/88.png" alt="Fiat" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Fiat</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Jeep" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/690.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/690.png 115w"><img src="https://catalogue.automobile.tn/marques/690.png" alt="Jeep" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Jeep</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Changan" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1655.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1655.png 115w"><img src="https://catalogue.automobile.tn/marques/1655.png" alt="Changan" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Changan</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">JMC - Japanese Motors Company</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Route de Gammarth<br> BP 127 - 2076 Marsa Erriadh</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->(+216) 36 407 900</p>
+                            <p><b>Fax :</b>
+                                <!-- -->(+216) 36 407 907</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Honda" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/188.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/188.png 115w"><img src="https://catalogue.automobile.tn/marques/188.png" alt="Honda" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Honda</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Le Moteur S.A</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">8 COMPLEXE INDUSTRIEL CHARGUIA 1 2035 TUNIS, TUNISIE</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->31 300 400</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 205 222</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Mercedes-Benz" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/9.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/9.png 115w"><img src="https://catalogue.automobile.tn/marques/9.png" alt="Mercedes-Benz" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Mercedes-Benz</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Tata" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1268.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1268.png 115w"><img src="https://catalogue.automobile.tn/marques/1268.png" alt="Tata" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Tata</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">NIMR</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">5 Rue de l'Artisanat, Charguia II</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->31 31 38 38</p>
+                            <p><b>Fax :</b>
+                                <!-- -->31 31 38 39</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="DFSK" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1602.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1602.png 115w"><img src="https://catalogue.automobile.tn/marques/1602.png" alt="DFSK" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">DFSK</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Dongfeng" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1640.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1640.png 115w"><img src="https://catalogue.automobile.tn/marques/1640.png" alt="Dongfeng" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Dongfeng</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">OIS Motors</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">Rue 8612 impasse n° 5, ZI Charguia 1</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->31 34 20 20</p>
+                            <p><b>Fax :</b>
+                                <!-- -->31 34 20 28</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="MG" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/904.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/904.png 115w"><img src="https://catalogue.automobile.tn/marques/904.png" alt="MG" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">MG</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">SAM</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">48 avenue Kheireddine PACHA - Monplaisir - 1002 TUNIS</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->71.901.340</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71.907.915</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Mitsubishi" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1504.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1504.png 115w"><img src="https://catalogue.automobile.tn/marques/1504.png" alt="Mitsubishi" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Mitsubishi</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">SBNF Motors</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300"><b>Kélibia</b>: Avenue Ali Belhawane 8090 - Kélibia <br>
+                                <b>Ben Arous</b>: LOT N°9 - Z,I MGHIRA II FOUCHENA Ben Arous</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->72 275 530 - 27 000 345</p>
+                            <p><b>Fax :</b>
+                                <!-- -->72 275 532</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Soueast" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1662.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1662.png 115w"><img src="https://catalogue.automobile.tn/marques/1662.png" alt="Soueast" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Soueast</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Huanghai" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1663.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1663.png 115w"><img src="https://catalogue.automobile.tn/marques/1663.png" alt="Huanghai" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Huanghai</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">SOMACOM</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">GP1 Km 5, direction Sfax, El Jem - 5160<br> R6W3+J38, Rue des Minéraux, Zone industrielle Charguia 1, Tunis<br>
+                                <b>Secteur Grand Tunis</b> Tel : 56132000<br>
+                                <b>Secteur Cap Bon et Bizerte</b> Tel: 58783333<br>
+                                <b>Secteur Sud</b> Tel: 58782222</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->31 588 600</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Foday" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1653.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1653.png 115w"><img src="https://catalogue.automobile.tn/marques/1653.png" alt="Foday" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Foday</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Sotudis</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300"><b>Tunis</b> : Parc Industriel Ben Arous GP1 km 5.5. / Tél : 70.131.000<br>
+                                <b>Sousse</b> : Route de Tunis KM 125.8 Parc Remila, Akouda / Tél : 70.131.040<br>
+                                <b>Sfax</b>: Route de Gabes, Boulevard de l’Environnement km 2.5 / Tél : 70.130.182</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->70 131 000</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Geely" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1615.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1615.png 115w"><img src="https://catalogue.automobile.tn/marques/1615.png" alt="Geely" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Geely</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">STA - Société Tunisienne d'Automobiles</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">ZI Borj Ghorbel, Ben Arous</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->31 390 290</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Chery" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1544.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1544.png 115w"><img src="https://catalogue.automobile.tn/marques/1544.png" alt="Chery" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Chery</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">STAFIM</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300"><b>Peugeot</b><br>Rue du Lac Leman - 1053 Les Berges du Lac
+                                <br><b>Opel</b><br>85 avenue louis Braille, 1003 Cité El Khadhra Tunis
+                                <br>Tél: 70 019 827</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->71 860 444</p>
+                            <p><b>Fax :</b>
+                                <!-- -->71 862 622</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Opel" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/11.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/11.png 115w"><img src="https://catalogue.automobile.tn/marques/11.png" alt="Opel" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Opel</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Peugeot" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/12.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/12.png 115w"><img src="https://catalogue.automobile.tn/marques/12.png" alt="Peugeot" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Peugeot</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">TLM Motors</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">42 rue de l'artisanat ZI Charguia II 2035 Tunis Carthage</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->70 258 732 - 70 258 731</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Faw" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1647.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1647.png 115w"><img src="https://catalogue.automobile.tn/marques/1647.png" alt="Faw" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Faw</span></a>
+                            </div>
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Bestune" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1669.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1669.png 115w"><img src="https://catalogue.automobile.tn/marques/1669.png" alt="Bestune" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Bestune</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">Universal Motors</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300">86, Rue 8600, Zone industrielle Charguia 1, 2035 Tunis, Tunisie</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->39 144 170</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Volvo" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/60.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/60.png 115w"><img src="https://catalogue.automobile.tn/marques/60.png" alt="Volvo" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Volvo</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_item rounded-sm border border-gray-300 bg-gray-100 py-1 px-3 text-sm dark:bg-slate-800 flex flex-col overflow-hidden">
+                        <a class="mt-2 block" href="#">
+                            <p class="text-xl font-semibold dark:text-slate-300">WALLYS CAR</p>
+                            <p class="my-3 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-300"><b>WALLYS CAR TUNIS SUD</b><br> 190 Avenue du 15 Octobre 1963, El Kabaria, Tunis Sud<br>
+                                <b>WALLYS CAR LAC 1</b><br> Avenue principale parking Wash&amp;Go – Berges du Lac 1 – Tunis</p>
+                            <p><b>Tél. :</b>
+                                <!-- -->70 164 164 - 29 381 438 - 98 153 080</p>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center pt-2">
+                            <div class="p-2">
+                                <a class="relative block max-h-full text-center" aria-label="Wallyscar" href="#">
+                                    <picture class="block text-center">
+                                        <source type="image/webp" srcset="https://catalogue.automobile.tn/marques/1476.webp 115w">
+                                        <source type="image/png" srcset="https://catalogue.automobile.tn/marques/1476.png 115w"><img src="https://catalogue.automobile.tn/marques/1476.png" alt="Wallyscar" width="115" height="100" class="mx-auto h-[63px] w-auto rounded-md p-1 dark:bg-gray-200"></picture><span class="absolute inset-x-0 bottom-2 block text-transparent">Wallyscar</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="top" class="absolute top-[0] left-0 h-14 w-0 bg-red-800"> </div>
+    </main>
+    <footer class="bg-black text-[#eee] py-5 pb-12 md:pb-5" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="px-4 mx-auto w-full xl:px-0 max-w-7xl">
+            <div class="grid lg:grid-cols-4">
+                <div class="grid grid-cols-2 gap-2 col-span-4 sm:col-span-2 text-gray-200 sm:grid-cols-3 md:col-span-3">
+                    <div class="py-5"><a class="text-[16px] mb-2 inline-block font-semibold uppercase" href="#">Prix du neuf</a><a class="my-0.5 block text-[14.4px]" href="#">Marques</a><a class="my-0.5 block text-[14.4px]" href="#">Concessionnaires</a>
+                        <a class="my-0.5 block text-[14.4px]" href="#">Comparateur</a>
+                    </div>
+                    <div class="py-5"><a class="text-[16px] mb-2 inline-block font-semibold uppercase" href="#">Occasions</a><a class="my-0.5 block text-[14.4px]" href="#">Recherche</a><a class="my-0.5 block text-[14.4px]" href="#">Annonces du jour</a>
+                        <a class="my-0.5 block text-[14.4px]" href="#">Vendeurs Pro</a>
+                    </div>
+                    <div class="py-5"><a class="text-[16px] mb-2 inline-block font-semibold uppercase" href="#">Auto Mag</a><a class="my-0.5 block text-[14.4px]" href="#">Nouveautés</a><a class="my-0.5 block text-[14.4px]" href="#">Actu</a>
+                        <a class="my-0.5 block text-[14.4px]" href="#">Essais</a><a class="my-0.5 block text-[14.4px]" href="#">Concepts</a></div>
+                    <div class="py-5"><a class="text-[16px] mb-2 inline-block font-semibold uppercase" href="#">Guide Pratique</a><a class="my-0.5 block text-[14.4px]" href="#">Droits de douanes</a><a class="my-0.5 block text-[14.4px]" href="#">FCR</a><a class="my-0.5 block text-[14.4px]" href="#">Permis de conduire</a><a class="my-0.5 block text-[14.4px]" href="#">Visite technique</a><a class="my-0.5 block text-[14.4px]" href="#">Vignette</a><a class="my-0.5 block text-[14.4px]" href="#">Voitures populaires</a></div>
+                    <div class="py-5"><a class="text-[16px] mb-2 inline-block font-semibold uppercase" href="#">Mon espace</a><a class="my-0.5 block text-[14.4px]" href="#">Créer une annonce</a><a class="my-0.5 block text-[14.4px]" href="#">Annonces favorites</a><a class="my-0.5 block text-[14.4px]" href="#">Gérer mes alertes</a><a class="my-0.5 block text-[14.4px]" href="#">Inscription</a>
+                        <a class="my-0.5 block text-[14.4px]" href="#">Gérer mes informations</a><a class="my-0.5 block text-[14.4px]" href="#">Mes annonces</a></div>
+                    <div class="py-5"><a class="text-[16px] mb-2 inline-block font-semibold uppercase" href="#">Qui sommes-nous ?</a><a class="my-0.5 block text-[14.4px]" href="#">Contactez-nous</a><a class="my-0.5 block text-[14.4px]" href="#">Mentions légales</a><a class="my-0.5 block text-[14.4px]" href="#">Politique de confidentialité</a><a class="my-0.5 block text-[14.4px]" href="#">Revue de presse</a></div>
+                </div>
+                <div class="py-5 w-full sm:flex justify-between col-span-2 lg:col-span-1 lg:block">
+                    <div>
+                        <div class="text-[16px] mb-2 inline-block font-bold uppercase ">Restez connecté</div>
+                        <div class="my-8 flex flex-row md:mt-2 md:flex-auto">
+                            <div class="flex md:order-2 gap-2"><a href="#" class="bg-[#3d3d3d] rounded p-2 hover:bg-[#4267b2] delay-75"><span class="sr-only">Facebook</span><svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg></a>
+                                <a href="#" class="bg-[#3d3d3d] rounded p-2 hover:bg-[#c00] delay-75"><span class="sr-only">YouTube</span><svg fill="currentColor" viewBox="0 0 576 512" class="h-6 w-6" aria-hidden="true"><path fill-rule="evenodd" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" clip-rule="evenodd"></path></svg></a>
+                                    <a href="#" class="bg-[#3d3d3d] rounded p-2 hover:bg-[#5642d7] delay-75"><span class="sr-only">Instagram</span><svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg></a>
+                                        <a href="#" class="bg-[#3d3d3d] rounded p-2 hover:bg-[#1da1f2] delay-75"><span class="sr-only">Twitter</span><svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
+                                            <a class="bg-[#3d3d3d] rounded p-2  hover:bg-[#e8720c] delay-75" href="#"><span class="sr-only">RSS</span><svg fill="currentColor" viewBox="0 0 448 512" class="h-6 w-6" aria-hidden="true"><path fill-rule="evenodd" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z" clip-rule="evenodd"></path></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-[16px] lg:mt-14 mb-2 inline-block font-bold uppercase ">Newsletter</div>
+                        <div class="my-2">
+                            <form method="post" action="/xhr/newsletter" enctype="application/x-www-form-urlencoded" id="newsletter-form">
+                                <div class="flex"><input type="email" class="input-field text-gray-800 rounded-l" placeholder="Votre e-mail" autocomplete="off" name="email" value=""><input type="hidden" name="redirectTo" value="/fr/neuf/concessionnaires"><input type="hidden" name="redirect" value="1"><button class="bg-ram hover:bg-ram-hover p-2 px-3 text-white rounded-r font-semibold" type="submit">OK</button></div>
+                            </form>
+                            <p class="mt-5 text-[13px] text-gray-400">Powered by <a href="#" rel="noopener noreferrer" class="text-white" target="_blank">IDK</a>, design by <a href="#" rel="noopener noreferrer" class="text-white" target="_blank">SAMETEAM</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#" aria-label="Retourner en haut de la page" class="bg-red-700 hover:opacity-100 transition-opacity duration-200 text-white fixed w-10 h-10 rounded-full bottom-2 left-2 text-xl text-center py-1 opacity-0 hover:opacity-0"><i class="fa fa-chevron-up"></i></a>
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
